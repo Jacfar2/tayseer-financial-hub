@@ -1,0 +1,27 @@
+<html>
+  <body>
+      <p>page1</p>
+  </body>
+</html><section>
+    <h2>Book a Consultation</h2>
+    <form onsubmit="sendToWhatsApp(); return false;">
+        <input type="text" id="clientName" placeholder="Your Name" required><br><br>
+        <input type="text" id="service" placeholder="Service Needed" required><br><br>
+        <textarea id="message" placeholder="Explain your problem"></textarea><br><br>
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<script>
+function sendToWhatsApp(){
+    let name = document.getElementById("clientName").value;
+    let service = document.getElementById("service").value;
+    let message = document.getElementById("message").value;
+
+    let phone = "254720033858";
+
+    let url = `https://wa.me/${phone}?text=Hello Tayseer Financial Hub,%0AName: ${name}%0AService: ${service}%0AMessage: ${message}`;
+
+    window.open(url, "_blank");
+}
+</script>
