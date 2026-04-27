@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <body>
+      <p>page2</p>
+  </body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tayseer Financial Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f6f8;
+            color: #333;
+        }
+        header {
+            background-color: #0a3d62;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+        }
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        .card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .cta {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .cta a {
+            background: #25D366;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Tayseer Financial Hub</h1>
+    <p>Your Partner in Financial Growth</p>
+</header>
+
+<section>
+    <h2>About Us</h2>
+    <p>
+        Tayseer Financial Hub helps individuals and small businesses manage money,
+        reduce debt, and grow financially through simple and practical solutions.
+    </p>
+</section>
+
+<section>
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="card">
+            <h3>Budget Planning</h3>
+            <p>We help you track income and expenses to control your finances.</p>
+            <strong>KES 500</strong>
+        </div>
+        <div class="card">
+            <h3>Bookkeeping</h3>
+            <p>Organize your business records and understand your profits.</p>
+            <strong>From KES 2,000</strong>
+        </div>
+        <div class="card">
+            <h3>Financial Consultation</h3>
+            <p>Get expert advice on loans, savings, and investments.</p>
+            <strong>KES 1,000</strong>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <h2>Contact Us</h2>
+    <p>Start your financial journey today</p>
+    <a href="https://wa.me/254726885389" target="_blank">
+        Chat on WhatsApp
+    </a>
+</section>
+
+<footer>
+    <p>© 2026 Tayseer Financial Hub | Garissa, Kenya</p>
+</footer>
+
+</body>
+</html><section>
+    <h2>Book a Consultation</h2>
+    <form onsubmit="sendToWhatsApp(); return false;">
+        <input type="text" id="clientName" placeholder="Your Name" required><br><br>
+        <input type="text" id="service" placeholder="Service Needed" required><br><br>
+        <textarea id="message" placeholder="Explain your problem"></textarea><br><br>
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<script>
+function sendToWhatsApp(){
+    let name = document.getElementById("clientName").value;
+    let service = document.getElementById("service").value;
+    let message = document.getElementById("message").value;
+
+    let phone = "254720033858";
+
+    let url = `https://wa.me/${phone}?text=Hello Tayseer Financial Hub,%0AName: ${name}%0AService: ${service}%0AMessage: ${message}`;
+
+    window.open(url, "_blank");
+}
+</script>
